@@ -7,9 +7,11 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    min-height: 100vh;
     background: url("images/AliZonebackground.jpg") no-repeat center center fixed;
     background-size: cover;
+}
+
 }
 
     color: #fff;
@@ -87,4 +89,5 @@ body {
         transform: translateY(0);
     }
 }
+
 
