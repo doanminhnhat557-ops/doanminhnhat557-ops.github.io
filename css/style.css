@@ -8,7 +8,7 @@ body {
   background-position: center top;
 
   /* QUAN TRỌNG */
-  padding-top: 160px;   /* ⬅ kéo nền + nội dung xuống */
+  padding-top: 200px;   /* ⬅ kéo nền + nội dung xuống */
   min-height: 100vh;
 }
 
