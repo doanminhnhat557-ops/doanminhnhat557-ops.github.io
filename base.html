@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "Team AliZone" }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Trang chủ</a>
+    <a href="/news">Tin tức</a>
+    <a href="/server">Server</a>
+    <a href="/members">Thành viên</a>
+</div>
+
+<div class="page">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
