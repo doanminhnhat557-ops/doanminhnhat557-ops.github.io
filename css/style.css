@@ -1,29 +1,140 @@
-body {
+/* =====================
+   RESET + BASE
+===================== */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-.bg {
-  position: fixed;
-  inset: 0;
-  background: url("AliZonebackground.jpg") center/cover no-repeat;
-  z-index: -1;
+html, body {
+  height: 100%;
 }
 
+/* =====================
+   BACKGROUND CHUNG
+===================== */
+body {
+  background: url("../img/AliZonebackround.jpg") center / cover no-repeat fixed;
+  color: #fff;
+}
+
+/* =====================
+   NAVBAR
+===================== */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.main {
-  padding-top: 200px; /* KÉO TẤT CẢ XUỐNG */
+.navbar a {
+  color: #00e5ff;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
+.navbar a:hover {
+  color: #ffffff;
+}
+
+/* =====================
+   HERO + OVERLAY
+===================== */
+.hero {
+  min-height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  min-height: 100vh;
+  padding-top: 140px; /* ĐẨY CARD XUỐNG */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.25)
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* =====================
+   CARD CHUNG
+===================== */
 .card {
-  width: 520px;
-  padding: 32px;
+  width: 560px;              /* TO */
+  max-width: 90%;
+  padding: 32px 36px;
+  background: rgba(70, 70, 70, 0.85);
   border-radius: 20px;
+
   backdrop-filter: blur(12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+
+  animation: fadeUp 0.6s ease;
 }
 
+/* =====================
+   TEXT TRONG CARD
+===================== */
+.card h1 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.card ul {
+  margin-top: 10px;
+  padding-left: 18px;
+}
+
+.card li {
+  margin-bottom: 6px;
+}
+
+/* =====================
+   ANIMATION
+===================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 600px) {
+  .card {
+    padding: 24px;
+  }
+
+  .card h1 {
+    font-size: 22px;
+  }
+}
