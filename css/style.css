@@ -1,9 +1,17 @@
-/* TEST LOAD CSS */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+  /* BACKGROUND */
+  background-image: url("../img/AliZonebackground.jpg"); /* nếu có */
+  background-size: cover;
+  background-position: center top;
+
+  /* QUAN TRỌNG */
+  padding-top: 140px;   /* ⬅ kéo nền + nội dung xuống */
   min-height: 100vh;
+}
+
 }
 
 /* NAVBAR */
@@ -25,14 +33,21 @@ body {
   font-weight: bold;
 }
 
-/* CARD CHUNG */
 .card {
-  max-width: 700px;
-  margin: 140px auto;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 30px;
-  color: #fff;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  max-width: 860px;          /* TO HƠN */
+  padding: 40px 50px;        /* DÀY HƠN */
+  margin: 120px auto;        /* CÁCH NAVBAR */
+
+  background: rgba(40, 40, 40, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 22px;
+  color: #ffffff;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.55),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
+
+  animation: fadeUp 0.8s ease;
 }
