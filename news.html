@@ -1,15 +1,35 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tin tức - Team AliZone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<div class="card">
+<!-- BACKGROUND -->
+<div class="bg"></div>
+
+<!-- NAV BAR -->
+<nav class="nav-blur">
+  <a href="index.html">Trang chủ</a>
+  <a href="news.html" class="active">Tin tức</a>
+  <a href="server.html">Server</a>
+  <a href="members.html">Thành viên</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="page-content">
+  <div class="glass-card">
     <h1>TIN TỨC</h1>
     <p>Cập nhật mới nhất từ Team AliZone.</p>
-
     <ul>
-        <li>✅ Server đang test ổn định</li>
-        <li>⚠️ Máy chủ hiện là Aternos (tạm thời)</li>
-        <li>🔥 Sắp mở chế độ Survival</li>
+      <li>✅ Server đang test ổn định</li>
+      <li>⚠️ Máy chủ hiện là Aternos (tạm)</li>
+      <li>🔥 Sắp mở chế độ Survival</li>
     </ul>
+  </div>
 </div>
 
-{% endblock %}
+</body>
+</html>
