@@ -1,53 +1,29 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-
-  /* BACKGROUND */
-  background-image: url("../img/AliZonebackground.jpg"); /* nếu có */
-  background-size: cover;
-  background-position: center top;
-
-  /* QUAN TRỌNG */
-  padding-top: 200px;   /* ⬅ kéo nền + nội dung xuống */
-  min-height: 100vh;
 }
 
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("AliZonebackground.jpg") center/cover no-repeat;
+  z-index: -1;
 }
 
-/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
-  padding: 12px 0;
-  text-align: center;
-  z-index: 1000;
+  height: 80px;
 }
 
-.navbar a {
-  color: #00eaff;
-  text-decoration: none;
-  margin: 0 50px;
-  font-weight: bold;
+.main {
+  padding-top: 140px; /* KÉO TẤT CẢ XUỐNG */
 }
 
 .card {
-  max-width: 860px;          /* TO HƠN */
-  padding: 40px 50px;        /* DÀY HƠN */
-  margin: 120px auto;        /* CÁCH NAVBAR */
-
-  background: rgba(40, 40, 40, 0.45);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border-radius: 22px;
-  color: #ffffff;
-
-  box-shadow:
-    0 25px 60px rgba(0,0,0,0.55),
-    inset 0 0 0 1px rgba(255,255,255,0.08);
-
-  animation: fadeUp 0.8s ease;
+  width: 520px;
+  padding: 32px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
 }
+
