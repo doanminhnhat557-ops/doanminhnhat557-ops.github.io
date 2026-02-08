@@ -1,6 +1,4 @@
-/* =========================
-   RESET + BASE
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,98 +6,64 @@
   font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-html, body {
-  width: 100%;
-  min-height: 100%;
-}
-
-/* =========================
-   BACKGROUND CHUNG
-========================= */
+/* BODY BACKGROUND */
 body {
-  background: url("../img/AliZonebackground.jpg") center / cover no-repeat fixed;
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("../img/Alizonebackground.jpg") center / cover no-repeat fixed;
   color: #fff;
 }
 
-/* lớp phủ tối để chữ dễ đọc */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.65),
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.75)
-  );
-  z-index: -1;
-}
-
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 64px;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .navbar a {
   color: #00e5ff;
   text-decoration: none;
-  margin: 0 20px;
+  margin: 0 18px;
   font-weight: 600;
-  transition: 0.2s;
 }
 
 .navbar a:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-.main {
+/* PAGE WRAPPER (CÁI NÀY QUAN TRỌNG) */
+.page {
   min-height: 100vh;
-  padding-top: 120px; /* QUAN TRỌNG – đẩy xuống dưới navbar */
+  padding-top: 140px; /* ĐẨY XUỐNG – ĐỪNG CHỈNH BODY */
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* =========================
-   CARD (DÙNG CHUNG CHO MỌI TRANG)
-========================= */
+/* CARD */
 .card {
-  width: min(90%, 520px);
-  padding: 32px 36px;
-  background: rgba(40, 40, 40, 0.75);
-  backdrop-filter: blur(18px);
-  border-radius: 18px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  width: 520px;
+  padding: 28px 32px;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-/* =========================
-   TEXT STYLE
-========================= */
-.card h1,
+.card h1 {
+  margin-bottom: 10px;
+}
+
 .card h2 {
-  margin-bottom: 14px;
-  font-size: 26px;
-  letter-spacing: 1px;
-}
-
-.card p {
-  color: #ddd;
-  margin-bottom: 14px;
+  margin-top: 18px;
 }
 
 .card ul {
@@ -109,19 +73,4 @@ body::before {
 
 .card li {
   margin: 6px 0;
-  color: #eaeaea;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 600px) {
-  .card {
-    padding: 24px;
-  }
-
-  .card h1,
-  .card h2 {
-    font-size: 22px;
-  }
 }
