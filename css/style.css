@@ -2,80 +2,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: #000;
+  height: 100vh;
   overflow-x: hidden;
 }
 
-/* NAVBAR */
-.navbar {
+/* BACKGROUND */
+.bg {
+  position: fixed;
+  inset: 0;
+  background: url("assets/AliZonebackground.jpg") center/cover no-repeat;
+  z-index: -2;
+}
+
+/* NAV BLUR */
+.nav-blur {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  gap: 30px;
-  padding: 14px 30px;
-  border-radius: 20px;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(12px);
+  padding: 14px 30px;
+  border-radius: 18px;
+  display: flex;
+  gap: 30px;
   z-index: 10;
 }
 
-.navbar a {
-  color: #00cfff;
+.nav-blur a {
+  color: #00eaff;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.navbar a:hover {
-  color: #fff;
+.nav-blur a.active {
+  color: white;
 }
 
-/* BACKGROUND */
-.background {
-  position: fixed;
-  inset: 0;
-  background: url("../img/AliZonebackground.jpg") center/cover no-repeat;
-  z-index: -1;
+/* PAGE CONTENT */
+.page-content {
+  padding-top: 140px;
+  padding-left: 80px;
 }
 
-/* CARD BLUR */
-.card {
-  margin-top: 180px;
-  margin-left: 80px;
+/* GLASS CARD */
+.glass-card {
   width: 420px;
-  padding: 24px;
-  border-radius: 18px;
-  background: rgba(20, 30, 40, 0.65);
+  background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(16px);
-  color: #fff;
-  animation: fadeUp 0.8s ease;
+  color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  animation: fadeUp 0.6s ease;
 }
 
-.card h1 {
+.glass-card h1 {
   margin-bottom: 10px;
 }
 
-.card p {
-  opacity: 0.85;
-  margin-bottom: 14px;
-}
-
-.card h3 {
+.glass-card ul {
   margin-top: 10px;
-  margin-bottom: 6px;
+  padding-left: 20px;
 }
 
-.card ul {
-  padding-left: 18px;
-}
-
+/* ANIMATION */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -86,4 +81,3 @@ body {
     transform: translateY(0);
   }
 }
-
