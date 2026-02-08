@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>{{ title if title else "Team AliZone" }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <title>Team AliZone</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="navbar">
-    <a href="/">Trang chủ</a>
-    <a href="/news">Tin tức</a>
-    <a href="/server">Server</a>
-    <a href="/members">Thành viên</a>
-</div>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html">Trang chủ</a>
+    <a href="news.html">Tin tức</a>
+    <a href="server.html">Server</a>
+    <a href="members.html">Thành viên</a>
+  </nav>
 
-<div class="page">
-    {% block content %}{% endblock %}
-</div>
+  <!-- CARD -->
+  <div class="card">
+    <h1>TEAM ALIZONE</h1>
+    <p>Trang web được tạo bởi team AliZone.</p>
+    <hr>
+    <h2>Thông tin server</h2>
+    <ul>
+      <li>Tên discord: AliZone</li>
+      <li>IP discord: https://discord.gg/sXQ2ga7m5v</li>
+      <li>Thành viên: 29 members</li>
+    </ul>
+  </div>
+
 </body>
 </html>
