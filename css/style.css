@@ -1,17 +1,12 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* BODY BACKGROUND */
 body {
   min-height: 100vh;
-  background: 
-    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("../img/Alizonebackground.jpg") center / cover no-repeat fixed;
   color: #fff;
 }
 
@@ -25,7 +20,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 10;
 }
 
 .navbar a {
@@ -39,31 +34,37 @@ body {
   color: #fff;
 }
 
-/* PAGE WRAPPER (CÁI NÀY QUAN TRỌNG) */
-.page {
-  min-height: 100vh;
-  padding-top: 140px; /* ĐẨY XUỐNG – ĐỪNG CHỈNH BODY */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+/* BACKGROUND */
+.bg-home {
+  background: url("../img/AliZonebackround.jpg") center/cover no-repeat fixed;
+}
+
+.bg-simple {
+  background: #111;
+}
+
+/* OVERLAY ĐỂ KÉO ẢNH XUỐNG */
+.overlay {
+  height: 160px;
 }
 
 /* CARD */
 .card {
-  width: 520px;
-  padding: 28px 32px;
-  background: rgba(30, 30, 30, 0.7);
-  backdrop-filter: blur(14px);
+  background: rgba(40,40,40,0.75);
+  backdrop-filter: blur(10px);
   border-radius: 16px;
+  padding: 28px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  margin: 120px auto;
+  max-width: 520px;
+}
+
+.big-card {
+  max-width: 620px;
 }
 
 .card h1 {
-  margin-bottom: 10px;
-}
-
-.card h2 {
-  margin-top: 18px;
+  margin-bottom: 12px;
 }
 
 .card ul {
@@ -73,4 +74,12 @@ body {
 
 .card li {
   margin: 6px 0;
+}
+
+/* CONTENT PAGE */
+.content {
+  padding-top: 120px;
+  max-width: 900px;
+  margin: auto;
+  color: #fff;
 }
