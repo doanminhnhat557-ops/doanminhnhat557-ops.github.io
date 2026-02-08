@@ -41,7 +41,7 @@ body {
 .background {
   position: fixed;
   inset: 0;
-  background: url("../img/bg.jpg") center/cover no-repeat;
+  background: url("../img/AliZonebackground.jpg") center/cover no-repeat;
   z-index: -1;
 }
 
@@ -86,3 +86,4 @@ body {
     transform: translateY(0);
   }
 }
+
