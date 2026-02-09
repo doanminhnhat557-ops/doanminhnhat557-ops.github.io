@@ -40,7 +40,7 @@ body {
 
 /* PAGE – chỗ này là lý do padding-top trước m không ăn */
 .page {
-  padding-top: 140px; /* ĐẨY NỘI DUNG XUỐNG */
+  padding-top: 200px; /* ĐẨY NỘI DUNG XUỐNG */
   padding-left: 60px;
 }
 
