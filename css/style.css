@@ -8,10 +8,10 @@
 
 /* BACKGROUND – KHÔNG KÉO THEO NỘI DUNG */
 body {
-  background: url("../img/AliZonebackground2.jpg") center / cover no-repeat fixed;
-  color: #fff;
-  min-height: 100vh;
+  background: url("../img/AliZonebackground2.jpg")
+              center 120px / cover no-repeat fixed;
 }
+
 
 /* NAVBAR */
 .navbar {
