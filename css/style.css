@@ -6,25 +6,24 @@
   font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-/* BACKGROUND */
+/* BACKGROUND – KHÔNG KÉO THEO NỘI DUNG */
 body {
-  min-height: 100vh;
   background: url("../img/AliZonebackground.jpg") center / cover no-repeat fixed;
   color: #fff;
+  min-height: 100vh;
 }
 
 /* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100px;
+  height: 64px;
   background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 24px;
   z-index: 1000;
 }
 
@@ -35,40 +34,58 @@ body {
 }
 
 .navbar a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
-/* PAGE – chỗ này là lý do padding-top trước m không ăn */
+/* PAGE – KHUNG CĂN GIỮA */
 .page {
-  padding-top: 200px; /* ĐẨY NỘI DUNG XUỐNG */
-  padding-left: 100px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* giữa ngang */
+  align-items: center;       /* giữa dọc */
+  padding-top: 64px;         /* né navbar */
 }
 
-/* CARD */
+/* CARD – CHỈ TO CARD */
 .card {
-  background: rgba(0,0,0,0.65);
-  border-radius: 50px;
-  box-shadow: 0 50px 100px rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+
+  width: 520px;        /* TO CARD */
+  padding: 40px 48px;  /* DÀY HƠN */
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  animation: fadeIn 0.6s ease;
 }
 
-.card.big {
-  width: 560px;
-  padding: 60px;
-}
-
+/* TEXT */
 .card h1 {
-  margin-bottom: 50px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .card h3 {
-  margin-top: 60px;
+  margin-top: 24px;
+  margin-bottom: 10px;
 }
 
 .card ul {
-  margin-top: 50px;
-  padding-left: 60px;
+  padding-left: 20px;
 }
 
 .card li {
-  margin-bottom: 40px;
+  margin-bottom: 6px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
