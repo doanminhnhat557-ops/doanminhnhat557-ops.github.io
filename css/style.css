@@ -10,6 +10,8 @@
 body {
   background: url("../img/AliZonebackground.jpg")
               center 100px / cover no-repeat fixed;
+  color: #fff;
+  min-height: 100vh;
 }
 
 
