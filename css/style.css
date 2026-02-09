@@ -1,78 +1,136 @@
-/* RESET */
+/* ======================
+   RESET + BASE
+====================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 html, body {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    min-height: 100%;
 }
 
-/* NAVBAR */
+/* ======================
+   BACKGROUND
+====================== */
+body {
+    background: url("../img/AliZonebackground.jpg") center / cover no-repeat fixed;
+    color: #fff;
+}
+
+/* ======================
+   NAVBAR
+====================== */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 64px;
-  background: rgba(0,0,0,0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    z-index: 1000;
 }
 
 .navbar a {
-  color: #00e5ff;
-  text-decoration: none;
-  font-weight: 600;
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
 }
 
 .navbar a:hover {
-  color: #fff;
+    color: #ffffff;
 }
 
-/* PAGE BACKGROUND */
+/* ======================
+   PAGE WRAPPER
+   (đẩy nội dung xuống,
+    KHÔNG bị navbar đè)
+====================== */
 .page {
-  min-height: 100vh;
-  padding-top: 140px; /* <<< CÁI NÀY KÉO XUỐNG NÈ */
-  padding-left: 80px;
-
-  background: 
-    linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.55)
-    ),
-    url("../img/AliZonebackground.jpg") center / cover no-repeat;
+    min-height: 100vh;
+    padding-top: 120px; /* CÁI NÀY QUAN TRỌNG */
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-/* CARD */
+/* ======================
+   CENTER CONTAINER
+====================== */
+.center {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* ======================
+   GLASS CARD
+====================== */
 .card {
-  width: 520px;
-  background: rgba(40,40,40,0.9);
-  color: #fff;
-  padding: 28px 32px;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    max-width: 520px;
+    padding: 28px 32px;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    animation: floatIn 0.9s ease forwards;
 }
 
+/* ======================
+   TEXT
+====================== */
 .card h1 {
-  margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
-.card h3 {
-  margin-top: 18px;
+.card h2 {
+    font-size: 20px;
+    margin: 18px 0 8px;
+}
+
+.card p {
+    opacity: 0.9;
 }
 
 .card ul {
-  margin-top: 10px;
-  padding-left: 20px;
+    margin-left: 18px;
 }
 
 .card li {
-  margin-bottom: 6px;
+    margin: 6px 0;
+}
+
+/* ======================
+   ANIMATION
+====================== */
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 768px) {
+    .center {
+        justify-content: center;
+    }
+
+    .card {
+        width: 100%;
+    }
 }
