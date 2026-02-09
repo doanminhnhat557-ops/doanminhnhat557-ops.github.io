@@ -1,136 +1,74 @@
-/* ======================
-   RESET + BASE
-====================== */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
-html, body {
-    width: 100%;
-    min-height: 100%;
-}
-
-/* ======================
-   BACKGROUND
-====================== */
+/* BACKGROUND */
 body {
-    background: url("../img/AliZonebackground.jpg") center / cover no-repeat fixed;
-    color: #fff;
+  min-height: 100vh;
+  background: url("../img/AliZonebackground.jpg") center / cover no-repeat fixed;
+  color: #fff;
 }
 
-/* ======================
-   NAVBAR
-====================== */
+/* NAVBAR */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 1000;
 }
 
 .navbar a {
-    color: #00e5ff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.25s;
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .navbar a:hover {
-    color: #ffffff;
+  color: #fff;
 }
 
-/* ======================
-   PAGE WRAPPER
-   (đẩy nội dung xuống,
-    KHÔNG bị navbar đè)
-====================== */
+/* PAGE – chỗ này là lý do padding-top trước m không ăn */
 .page {
-    min-height: 100vh;
-    padding-top: 120px; /* CÁI NÀY QUAN TRỌNG */
-    padding-left: 24px;
-    padding-right: 24px;
+  padding-top: 140px; /* ĐẨY NỘI DUNG XUỐNG */
+  padding-left: 60px;
 }
 
-/* ======================
-   CENTER CONTAINER
-====================== */
-.center {
-    display: flex;
-    justify-content: flex-start;
-}
-
-/* ======================
-   GLASS CARD
-====================== */
+/* CARD */
 .card {
-    max-width: 520px;
-    padding: 28px 32px;
-    background: rgba(0,0,0,0.55);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-radius: 18px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    animation: floatIn 0.9s ease forwards;
+  background: rgba(0,0,0,0.65);
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 
-/* ======================
-   TEXT
-====================== */
+.card.big {
+  width: 460px;
+  padding: 30px;
+}
+
 .card h1 {
-    font-size: 28px;
-    margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.card h2 {
-    font-size: 20px;
-    margin: 18px 0 8px;
-}
-
-.card p {
-    opacity: 0.9;
+.card h3 {
+  margin-top: 15px;
 }
 
 .card ul {
-    margin-left: 18px;
+  margin-top: 10px;
+  padding-left: 20px;
 }
 
 .card li {
-    margin: 6px 0;
-}
-
-/* ======================
-   ANIMATION
-====================== */
-@keyframes floatIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ======================
-   RESPONSIVE
-====================== */
-@media (max-width: 768px) {
-    .center {
-        justify-content: center;
-    }
-
-    .card {
-        width: 100%;
-    }
+  margin-bottom: 6px;
 }
